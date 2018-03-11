@@ -1,0 +1,19 @@
+What I did:
+    -fix npm_config_port to npm_package_config_port allowing to set different port numbers through package.json
+    -in package.json replaced node with nodemon, so be sure that nodemon is installed globally on your machine: 
+            npm install -g nodemon
+    -
+
+
+
+
+
+
+
+
+
+proptypes
+reactrouter
+redux
+reactrouter redux
+sass
