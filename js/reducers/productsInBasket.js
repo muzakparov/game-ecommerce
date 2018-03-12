@@ -5,9 +5,12 @@ const productsInBasket=(state=[],action)=>{
             return state;
 
         case "REMOVE_PRODUCT_FROM_BASKET":
-            return state.filter(product=>product.id!==action.product.id)      
+            console.log("REMOVE_PRODUCT_FROM_BASKET",state.filter(statum=>statum.id!==action.product.id) )
+            return state.filter(statum=>statum.id!==action.product.id)      
              
         default:
             return state
     }
 }
+
+export default productsInBasket

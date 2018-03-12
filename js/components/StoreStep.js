@@ -17,16 +17,16 @@ class StoreStep extends Component {
 		const {
 			productsInBasket,
 			isInBasketArr,
-			onProductDelete,
 			productsArr,
+			onProductDelete,			
 		} = this.props
 
 		const productsList = productsArr.map(product => {
-			const { isSelected } = isInBasketArr.length ?
-				isInBasketArr.filter(isInBasket => isInBasket.id === product.id)[0]
+			const isSelected  = isInBasketArr.length ?
+				isInBasketArr.filter(isInBasket => isInBasket.id === product.id)[0].isSelected
 				: false
 
-			console.log("isInBasketArr isSelected", isSelected)
+			console.log("StoreStep productsInBasket",productsInBasket)
 
 			return (
 				<Product

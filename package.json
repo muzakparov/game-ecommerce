@@ -5,7 +5,7 @@
         "start": "cross-env NODE_ENV=development nodemon ./server.js"
     },
     "config": {
-        "port": "4000"
+        "port": "3000"
     },
     "license": "MIT",
     "dependencies": {

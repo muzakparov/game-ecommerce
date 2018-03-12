@@ -14,3 +14,5 @@ store.subscribe(() =>
     console.log("STORE IN REDUX",store.getState())
 )
 
+export default store
+

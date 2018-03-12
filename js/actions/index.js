@@ -5,7 +5,7 @@ export const addProductToBasket = (product) => {
     }
 }
 
-export const removeProductToBasket = (product) => {
+export const removeProductFromBasket = (product) => {
     return {
         type: "REMOVE_PRODUCT_FROM_BASKET",
         product,

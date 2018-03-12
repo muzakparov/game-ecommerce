@@ -1,8 +1,10 @@
+import React from 'react'
+
 import { connect } from 'react-redux'
 
 import {
     addProductToBasket,
-    removeProductToBasket,
+    removeProductFromBasket,
     initIsInBasketArr,
     setIsInBasketArr,
 } from '../actions'
@@ -22,8 +24,8 @@ const mapDispatchToProps = (dispatch) => {
         onAddProductToBasket:(product)=>{
             dispatch(addProductToBasket(product))
         },
-        onRemoveProductToBasket:(product)=>{
-            dispatch(removeProductToBasket(product))
+        onRemoveProductFromBasket:(product)=>{
+            dispatch(removeProductFromBasket(product))
         },
         onSetIsInBasketArr:(product, isSelected)=>{
             dispatch(setIsInBasketArr(product, isSelected))
