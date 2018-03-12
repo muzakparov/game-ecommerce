@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { Router, Route, hashHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
 
 import StoreStep from './StoreStep'
 import Checkout from './Checkout'
 
+import store from '../store'
+
+// const history = syncHistoryWithStore(browserHistory, store)
 
 class App extends Component {
 	constructor(props) {
