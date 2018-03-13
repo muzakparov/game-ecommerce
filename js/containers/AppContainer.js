@@ -36,6 +36,12 @@ const mapDispatchToProps = (dispatch) => {
         onInitIsInBasketArr:(productsList)=>{
             dispatch(initIsInBasketArr(productsList))
         },
+        onAdd:(price)=>{
+            dispatch(add(price))
+        },
+        onSubtract:(price)=>{
+            dispatch(subtract(price))
+        },
     }
 }
 
