@@ -7,6 +7,8 @@ import {
     removeProductFromBasket,
     initIsInBasketArr,
     setIsInBasketArr,
+    add,
+    subtract,
 } from '../actions'
 
 import App from '../components/App'
