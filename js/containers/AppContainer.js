@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
         productsArr: ownProps.productsArr,
         productsInBasket: state.productsInBasket,
         isInBasketArr: state.isInBasketArr,
+        total:state.total,
     }
 }
 
