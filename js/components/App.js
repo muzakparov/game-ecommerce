@@ -12,8 +12,8 @@ import store from '../store'
 
 class App extends Component {
 	constructor(props) {
-        super(props)
-        console.log("APP constructor",this.props)
+		super(props)
+		console.log("APP constructor", this.props)
 		this.handleProductClick = this.handleProductClick.bind(this)
 		this.handleProductDelete = this.handleProductDelete.bind(this)
 	}
@@ -32,42 +32,58 @@ class App extends Component {
 			return
 		}
 
-        this.props.onAddProductToBasket(product)
-        this.props.onSetIsInBasketArr(product, true)
-        
+		this.props.onAddProductToBasket(product)
+		this.props.onSetIsInBasketArr(product, true)
+
 	}
 
 	handleProductDelete(product) {
 		//console.log("handleProductDelete",product,this.props.onRemoveProductFromBasket)
 		this.props.onRemoveProductFromBasket(product)
-		this.props.onSetIsInBasketArr(product,false)
+		this.props.onSetIsInBasketArr(product, false)
 	}
 
 	render() {
-		const {             
+		const {
             productsArr,
         } = this.props
 
 		return (
-			<Router history={hashHistory}>
-				<Route exact path="/" component={() => (
-					<StoreStep
-						onProductClick={this.handleProductClick}
-						onProductDelete={this.handleProductDelete}
-						productsArr={productsArr}
-                        productsInBasket={this.props.productsInBasket}
-                        isInBasketArr={this.props.isInBasketArr}
-					/>)
-				}
-				/>
-				<Route path="/checkout" component={() => (
-					<Checkout
-						productsInBasket={this.props.productsInBasket}
-						onProductDelete={this.handleProductDelete}
-					/>)
-				}
-				/>
-			</Router>
+			<div className="page">
+				<nav>
+					<ul>
+						<li><img src="./assets/telephone.png" alt="phone"/> <span>1337 1337 1337</span></li>
+						<li><img src="./assets/flag.png" alt="flag"/> <span>Try another castle</span> </li>
+					</ul>
+				</nav>
+
+				<div className="logo-section">
+					<div className="logo-wrap">
+						<img src="./assets/logo.png" alt="logo" className="logo"/>
+					</div>					
+				</div>
+
+				<Router history={hashHistory}>
+					<Route exact path="/" component={() => (
+						<StoreStep
+							onProductClick={this.handleProductClick}
+							onProductDelete={this.handleProductDelete}
+							productsArr={productsArr}
+							productsInBasket={this.props.productsInBasket}
+							isInBasketArr={this.props.isInBasketArr}
+						/>)
+					}
+					/>
+					<Route path="/checkout" component={() => (
+						<Checkout
+							productsInBasket={this.props.productsInBasket}
+							onProductDelete={this.handleProductDelete}
+						/>)
+					}
+					/>
+				</Router>
+			</div>
+
 		)
 	}
 }

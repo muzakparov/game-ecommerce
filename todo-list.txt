@@ -1,0 +1,75 @@
+css/style
+
+deploy
+
+sass
+
+jest
+
+deploy
+
+css float
+css flexbox
+
+responsiveness
+
+search filter sorting
+
+react animations
+
+immutablejs
+
+lodash
+
+-refactoring
+
+
+server/database stuff
+
+express middleware architecture
+
+mongodb/mysql
+
+authentication/authorization
+
+axios
+bluebird
+react-loadable
+
+socket.io
+
+cookies
+caching
+
+REACT API - use all
+HOC
+ref
+portal
+context
+lifecycle methods
+functional components
+
+server side rendering
+
+PWA
+service workers
+
+
+future - dan abramov
+
+
+add chat
+drag and drop functionality add
+
+css-in-jest
+
+use some UI react library
+
+
+modal with react
+
+give total e-commerce experience
+
+
+add 3rd party API
+

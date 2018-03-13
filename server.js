@@ -12,7 +12,7 @@ const host = 'http://localhost';
 const port = process.env.npm_package_config_port ? process.env.npm_package_config_port : 8080;
 console.log("PORT", process.env.npm_package_config_port);//will be undefined because ? :)
 
-app.use(express.static(path.join('css')));
+app.use('/css',express.static(path.join(__dirname,'./css')));
 app.use(express.static(path.join('js')));
 app.use('/assets', express.static(path.join(__dirname, './assets')));
 

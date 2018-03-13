@@ -18,15 +18,15 @@ class StoreStep extends Component {
 			productsInBasket,
 			isInBasketArr,
 			productsArr,
-			onProductDelete,			
+			onProductDelete,
 		} = this.props
 
 		const productsList = productsArr.map(product => {
-			const isSelected  = isInBasketArr.length ?
+			const isSelected = isInBasketArr.length ?
 				isInBasketArr.filter(isInBasket => isInBasket.id === product.id)[0].isSelected
 				: false
 
-			console.log("StoreStep productsInBasket",productsInBasket)
+			console.log("StoreStep productsInBasket", productsInBasket)
 
 			return (
 				<Product
@@ -52,17 +52,34 @@ class StoreStep extends Component {
 		console.log("productsInBasketList", productsInBasketList)
 
 		return (
-			<div>
-				{productsList}
-				<div className="basket">
+			<React.Fragment>
+				<div className="basket-section">
 					<h1>Basket</h1>
 					{
-						!productsInBasket.length && <p>No Items</p>
+						!productsInBasket.length && <p>No items</p>
 					}
 					<div>{productsInBasketList}</div>
-					<button>{productsInBasket.length ? <Link to="/checkout">Continue</Link> : "Continue"}</button>
+					<div className="btn-continue-wrap">
+						{
+							!productsInBasket.length && <div className="disable-overlay"></div>
+						}
+						<button className="btn-continue">
+							{productsInBasket.length
+								? <Link to="/checkout" style={{textDecoration:"none", color:"white"}}>Continue</Link>
+								: "Continue"
+							}
+						</button>
+					</div>
 				</div>
-			</div>
+
+				<div className="products-list-section">
+					<div className="products-list-wrap">
+						{productsList}
+					</div>
+					
+				</div>
+
+			</React.Fragment>
 
 		)
 	}

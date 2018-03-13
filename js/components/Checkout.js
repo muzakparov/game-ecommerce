@@ -21,10 +21,11 @@ class Checkout extends Component {
 		})
 
 		return (
-			<div>
-				<Link to="/">Back</Link>
-				<div>Checkout</div>
-				<div>
+			<div className="checkout">
+				<Link to="/" className="add-to-basket" style={{textDecoration:"none", color:"white"}}>
+					Back
+				</Link>
+				<div className="products-list">
 					{productsInBasketList}
 				</div>
 			</div>
