@@ -28,6 +28,7 @@ class Checkout extends Component {
 				<div className="products-list">
 					{productsInBasketList}
 				</div>
+				<div>Total: {this.props.total}</div>
 			</div>
 		)
 	}

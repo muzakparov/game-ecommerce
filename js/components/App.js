@@ -83,6 +83,7 @@ class App extends Component {
 						<Checkout
 							productsInBasket={this.props.productsInBasket}
 							onProductDelete={this.handleProductDelete}
+							total={this.props.total}
 						/>)
 					}
 					/>
