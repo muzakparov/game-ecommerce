@@ -46,7 +46,9 @@ class App extends Component {
 	render() {
 		const {
             productsArr,
-        } = this.props
+		} = this.props
+		
+		console.log("TOTAL", this.props.total)
 
 		return (
 			<div className="page">
