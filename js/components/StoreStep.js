@@ -59,6 +59,7 @@ class StoreStep extends Component {
 						!productsInBasket.length && <p>No items</p>
 					}
 					<div>{productsInBasketList}</div>
+					<div>Total</div>
 					<div className="btn-continue-wrap">
 						{
 							!productsInBasket.length && <div className="disable-overlay"></div>

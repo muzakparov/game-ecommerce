@@ -34,6 +34,7 @@ class App extends Component {
 
 		this.props.onAddProductToBasket(product)
 		this.props.onSetIsInBasketArr(product, true)
+		this.props.onAdd(product.price)
 
 	}
 
@@ -41,6 +42,7 @@ class App extends Component {
 		//console.log("handleProductDelete",product,this.props.onRemoveProductFromBasket)
 		this.props.onRemoveProductFromBasket(product)
 		this.props.onSetIsInBasketArr(product, false)
+		this.props.onSubtract(product.price)
 	}
 
 	render() {
@@ -73,6 +75,7 @@ class App extends Component {
 							productsArr={productsArr}
 							productsInBasket={this.props.productsInBasket}
 							isInBasketArr={this.props.isInBasketArr}
+							total={this.props.total}
 						/>)
 					}
 					/>
