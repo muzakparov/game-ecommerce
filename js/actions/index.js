@@ -26,3 +26,20 @@ export const setIsInBasketArr = (product, isSelected) => {
         isSelected,
     }
 }
+
+
+//total
+export const add=(price)=>{
+    return {
+        type:"ADD",
+        price,
+    }
+}
+
+export const subtract=(price)=>{
+    return {
+        type:"SUBTRACT",
+        price,
+    }
+}
+

@@ -1,12 +1,10 @@
-const productsInBasket=(state=[],action)=>{
+const productsInBasket=(state=0,action)=>{
     switch(action.type){
-        case "ADD_PRODUCT_TO_BASKET":
-            state.push(action.product)
-            return state;
+        case "ADD":            
+            return state+action.price;
 
-        case "REMOVE_PRODUCT_FROM_BASKET":
-            console.log("REMOVE_PRODUCT_FROM_BASKET",state.filter(statum=>statum.id!==action.product.id) )
-            return state.filter(statum=>statum.id!==action.product.id)      
+        case "SUBTRACT":
+            return state-action.price;  
              
         default:
             return state
