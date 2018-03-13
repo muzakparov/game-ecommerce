@@ -1,4 +1,4 @@
-const productsInBasket=(state=0,action)=>{
+const total=(state=0,action)=>{
     switch(action.type){
         case "ADD":            
             return state+action.price;
@@ -11,4 +11,4 @@ const productsInBasket=(state=0,action)=>{
     }
 }
 
-export default productsInBasket
+export default total
