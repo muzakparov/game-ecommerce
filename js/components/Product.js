@@ -5,10 +5,9 @@ class Product extends Component {
 	constructor() {
 		super()
 
-		this.handleProductClick = this.handleProductClick.bind(this)
 	}
 
-	handleProductClick() {
+	handleProductClick=()=> {
 		this.props.onProductClick(this.props.product)
 	}
 
