@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 
 
 class Product extends Component {
-	constructor() {
-		super()
 
-	}
 
 	handleProductClick=()=> {
 		this.props.onProductClick(this.props.product)
