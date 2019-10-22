@@ -27,6 +27,13 @@ const productsArr = [
 		productDescription: "Lorem ipsum dolor sit amet consectetur.",
 		price: 100
 	},
+	{
+		id: 5,
+		imgSrc: "./assets/game5.jpg",
+		productName: "Product Name",
+		productDescription: "Lorem ipsum dolor sit amet consectetur.",
+		price: 1500
+	},
 ]
 
 export default productsArr
