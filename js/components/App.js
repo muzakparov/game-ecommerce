@@ -11,18 +11,12 @@ import store from '../store'
 // const history = syncHistoryWithStore(browserHistory, store)
 
 class App extends Component {
-	constructor(props) {
-		super(props)
-		console.log("APP constructor", this.props)
-		this.handleProductClick = this.handleProductClick.bind(this)
-		this.handleProductDelete = this.handleProductDelete.bind(this)
-	}
 
 	componentDidMount() {
 		this.props.onInitIsInBasketArr(this.props.productsArr)
 	}
 
-	handleProductClick(product) {
+	handleProductClick=(product)=>{
 		console.log("add to basket")
 
 		const isInBasket = this.props.isInBasketArr.filter(isInBasket => product.id === isInBasket.id)[0]
@@ -38,7 +32,7 @@ class App extends Component {
 
 	}
 
-	handleProductDelete(product) {
+	handleProductDelete=(product)=> {
 		//console.log("handleProductDelete",product,this.props.onRemoveProductFromBasket)
 		this.props.onRemoveProductFromBasket(product)
 		this.props.onSetIsInBasketArr(product, false)
